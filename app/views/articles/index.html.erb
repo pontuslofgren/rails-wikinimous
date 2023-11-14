@@ -1,9 +1,11 @@
-<h1>Articles#index</h1>
 
-<ul>
-<%  @articles.each do |article| %>
-  <li><%= link_to article.title, article_path(article) %></li>
-<% end %>
-</ul>
 
-<p><%= link_to 'Create new article', articles_new_path %> </p>
+<div class="container">
+  <h2>All articles</h2>
+
+  <ul class="list-group list-group-flush">
+  <%  @articles.each do |article| %>
+    <li class="list-group-item"><%= link_to article.title, article_path(article) %></li>
+  <% end %>
+  </ul>
+</div>

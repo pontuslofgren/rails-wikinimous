@@ -1,9 +1,12 @@
-<h2><%= @article.title %></h2>
-<p><%= @article.content %></p>
+<div class="container">
+  <h2 class="border-bottom"><%= @article.title %></h2>
+  <p class="card p-3"><%= @article.content %></p>
 
-<p><%= link_to 'Edit this article', edit_path %></p>
+  <%= link_to 'Edit this article', edit_path, class: "btn btn-primary" %>
 
-<%= link_to "Delete",
-  article_path(@article),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-%>
+  <%= link_to "Delete",
+    article_path(@article),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+    class: "btn btn-danger"
+  %>
+</div>
