@@ -7,3 +7,13 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+
+require 'faker'
+
+10.times do |i|
+  title = Faker::Movie.title #=> "The Lord of the Rings: The Two Towers"
+  content = Faker::Quote.famous_last_words #=> "My vocabulary did this to me. Your love will let you go on…"
+
+  article = Article.create(title: title, content: content)
+end
