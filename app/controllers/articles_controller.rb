@@ -21,6 +21,9 @@ class ArticlesController < ApplicationController
   end
 
   def edit
+    add_breadcrumb("Home", root_path)
+    add_breadcrumb("Article", article_path)
+    add_breadcrumb("Edit")
   end
 
   def update
@@ -47,4 +50,6 @@ class ArticlesController < ApplicationController
   def article_params
     params.require(:article).permit(:title, :content)
   end
+
+
 end

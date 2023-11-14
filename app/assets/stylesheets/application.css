@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+ .article-link:hover {
+  background-color: #2b3035;
+ }
